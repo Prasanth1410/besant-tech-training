@@ -1,0 +1,88 @@
+--SUB LANGUGAES of SQL.
+
+DDL, DML, DQL, DCL, TCL
+--
+	DDL - Data Definition Language
+		- works with the Structure of the table
+	What is structure?
+	
+		table, name of the table, columns, Datatypes and constraints
+
+
+		DDL ----
+			CREATE
+			ALTER
+			DROP
+			TRUNCATE
+			RENAME
+
+What is DDL?
+--Data Definition Language
+--Works on the structure of the table (columns, datatypes, table name, columns name, constraints)
+--DDL will not affect the data's present in the table
+--DDL involves in [creation of new table][updating/inserting into existing table - such as  changing the table/column name, delete/remove - column/table]
+[remove the table from database]
+
+==============================================================================================================================================================================
+CREATE - to create a object
+
+	SYNTAX:
+	CREATE DATABASE <database_name>
+	CREATE TABLE <table_name>
+
+==============================================================================================================================================================================
+
+ALTER - Modify created object
+	
+1. MODIFY - Alter column - change the datatype and size of the datatype
+2. ADD    - we can add a new column
+3. RENAME - we can change the column name
+4. DROP   - we can drop a column
+
+	SYNTAX:
+	1. ALTER COLUMN:
+		ALTER TABLE <table_name> 
+		ALTER COLUMN <col_name><new datatype>[new size]
+
+	2. ADD:
+		ALTER TABLE <table_name>
+		ADD <new_col_name><datatype>[size]
+
+	3. RENAME: ----dont use in office environment[optional]
+		SP_RENAME'<Table_name>.<old_col_Name>','<new_col_name>'
+
+
+	4.DROP:
+		ALTER TABLE <table_name>
+		DROP COLUMN <col_name>,<col_name2>,<col_name3>......
+
+==============================================================================================================================================================================
+
+DROP - Deletes the object ----dont use in office environment[optional]
+
+	SYNTAX:
+	DROP DATABASE <database_name>
+	DROP TABLE <table_name>
+
+==============================================================================================================================================================================
+
+TRUNCATE - Delete all records and keeps the table ----dont use in office environment[optional]
+
+	SYNTAX:
+	TRUNCATE TABLE <table_name>
+
+==============================================================================================================================================================================
+
+RENAME - Rename the table/Column ----dont use in office environment[optional]
+
+	SYNTAX:
+	
+	SP_RENAME '<old_tablename>','<new_tablename>'
+
+
+
+
+
+
+
+

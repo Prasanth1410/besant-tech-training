@@ -1,0 +1,54 @@
+What is SQL?
+
+- SQL is a language to communicate with DATABASE
+- SQL - Structured Query Language (S-E-Q-U-E-L)
+- SQL is Domain Specific Language (DSLs) or it is like a scripting language.
+
+-SQL/DS(data System) was - 1981 by IBM , 1st commercial RDBMS.
+
+-SQL helps us to access - STORE, PROCESS, ANALYZE and MANIPULATE the datas.
+
+--CRUD - [CREATE, READ, UPDATE & DELETE] operations that can be used in the SQL.
+
+
+
+Introduction to SQL SERVER	
+	
+	SQL stands for the structured query language. SQL Server is a relational database management system (RDBMS) developed by Microsoft. By using SQL Server we can store and retrieve data from one place called database and use that data whenever it required in other programming applications. SQL is same as other relational database management systems like Sybase, Mysql, pl/sql, etc.
+	
+	
+Uses of SQL Server	
+◕	It will allow us to access data in database and perform different operations on data - CRUD
+◕	We can create databases, tables, and stored procedures to access data in required format
+◕	We can do insert, update, delete, select, etc. to communicate with data stored in databases.
+◕	We can create views, functions, indexes, keys, etc. in a database to get data in an efficient way
+◕	In SQL we can create roles and user-level permissions to access data in databases
+◕	We can access SQL database data from other languages using SQL modules, libraries
+	
+	
+History of SQL Server	
+	
+The journey of SQL started in 1989, originally code base of SQL sold by Sybase SQL Server to Microsoft. They launched this product as a competitor for IBM, Oracle, etc.
+	
+	
+What is Latesh version of sql server?
+The current version is Microsoft SQL Server 2022, released November 16, 2022. The RTM version is 16.0. 1000.6. (varies based on the updates)
+https://support.microsoft.com/en-us/topic/kb4518398-sql-server-2019-build-versions-782ed548-1cd8-b5c3-a566-8b4f9e20293a
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MICROSOFT SERVER / MS-SQL
+
+

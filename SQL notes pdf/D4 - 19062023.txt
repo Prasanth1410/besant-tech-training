@@ -1,0 +1,67 @@
+							SERVER TYPES
+----------------------------------------------------------------------------------------------------------------
+DATABASE ENGINE :
+	--its a core compentent of SQL Server
+	--its a main service/core service of SSMS
+
+'CORE' -- Major part of Database Engine
+	--STORES     -- Stores data in table format
+	--PROCESSING -- Insert, Update, Delete datas
+	--SECURITY   -- Provides security for datas
+
+Database Engine is most important server that MSBI tools.
+
+
+
+
+ANALYSIS SERVICES (SSAS):
+-- Creation of cubes with data marts/data warehouses for insightful and quicker data analysis
+-- Two major alternatives – Multidimensional (for corporate analytics) and Tabular (for personal and team analytics)
+-- Mostly used in Data Warehousing environment
+
+
+REPORTING SERVICES (SSRS):
+-- Faster processing of reports on both relational and multidimensional data
+-- SSRS allows reports to be exported in different formats. You can deliver SSRS reports using emails
+-- SSRS provides a host of security features, which helps you to control, who can access which report
+
+
+INTERGRATION SERVICES (SSIS):
+-- SSIS is a fast & flexible data warehousing tool used for data extraction, loading and transformation like cleaning, aggregating, merging data, etc.
+--It makes it easy to move data from one database to another database. SSIS can extract data from a wide variety of sources like SQL Server databases, Excel files, Oracle and DB2 databases, etc.
+-- SSIS tool helps you to merge data from various data stores
+-- Automates Administrative Functions and Data Loading
+
+
+
+
+								SERVER NAME
+----------------------------------------------------------------------------------------------------------------
+-- Servername is nothing but Instance Name given to your SQLServer instance
+-- For default instance, it would be same as the Server Name or the Machine Name
+-- For named instance, it would be ServerName\InstanceName or MachineName\InstanceName
+-- You can also use IPAddress instead of ServerName
+
+
+
+
+								AUTHENTICATION
+----------------------------------------------------------------------------------------------------------------
+There are two authentication modes in SQL Server using which you can login and connect with the SQL Server.
+
+1. WINDOWS Authentications:
+-- Windows authentication mode enables local Windows authentication with SQL Server, where you can login with your local Windows credentials.
+	
+	
+2. SERVER Authentication:
+-- Database administrators create SQL logins and provide appropriate permissions for users to authenticate themselves to SQL Server. Users need to specify the login and password while connecting to SQL Server
+
+
+
+
+
+
+
+
+
+

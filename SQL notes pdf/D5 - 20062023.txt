@@ -1,0 +1,193 @@
+Data Types in SQL Server															
+															
+In SQL, the data type is an attribute used to specify a type of data the column can hold, like numeric type, character type, binary type, date and time type, etc. 									
+
+=========================================================================================================================================================================================================					
+SQL Exact Numeric Data Types			
+			
+The exact numeric data types in sql are useful to store an integer type of data. Please check the following table for exact numeric data types in sql server.			
+			
+	Data Type	Description													Storage Size
+	
+	bit		It’s single bit integer that can take values of 0, 1 or null	
+	tinyint		It’s single Byte integer we can store values from 0 to 255 (Minval: 0, Maxval: 255)				1 Byte
+	smallint	It’s 16 bit integer we can store values from -2^15 (-32,768) to 2^15 - 1 (32,767)				2 Bytes
+	int		It’s 32 bit integer we can store values from -2^15 (-32,768) to 2^15 - 1 (32,767)				4 Bytes
+	bigint		It’s a 64-bit integer we can store values from -2^63 (-9223372036854775808) to 2^63-1 (9223372036854775807)	8 Bytes
+	decimal		We can store values from -10^38 1 to 10^38 –1									5 - 17 Bytes
+	numeric		We can store values from -10^38 1 to 10^38 –1									5 - 17 Bytes
+	smallmoney	We can store monetary values from - 214,748.3648 to 214,748.3647						4 Bytes
+	money		We can store monetary values from -922,337,203,685,477.5808 to 922,337,203,685,477.5807				8 Bytes
+			
+================			
+SQL Approximate Numeric Data Types			
+			
+In sql, Approximate numeric data types are used to store numeric data with floating-point i.e. floating-point data is approximate therefore not all values in the data type range can be represented exactly.			
+			
+	Data Type	Description						Storage Size
+	
+	Float(n)	We can store values from - 1.79E 308 to 1.79E 308	Depends on the value of n
+	real		We can store values from - 3.40E 38 to 3.40E 38		4 Bytes
+
+
+=========================================================================================================================================================================================================
+
+SQL Date and Time Data Types			
+			
+In sql, datetime data types are used to store a date or date and time data in particular column. We have a different type of date and time data types are available in sql server, those are			
+				
+			
+	Data Type	Description														Storage Size
+	smalldatetime	We can store values From January 1, 1900 to June 6, 2079, and it’s having an accuracy of 1 minute			4 Bytes
+	datetime	We can store values from January 1, 1753, to December 31, 9999 and it’s having an accuracy of 3.33 milliseconds		8 Bytes
+	datetime2	We can store values from January 1, 0001 to December 31, 9999 and it’s having accuracy of 100 nanoseconds		6 - 8 Bytes
+	date		We can store only date format like May 05, 1986, and the range is from January 1, 0001 to December 31, 9999		3 Bytes
+	time		We can store only time format like 12.00 PM										3 - 5 Bytes
+	datetimeoffset	It’s same as datetime2 with the addition of a time zone offset								8 - 10 Bytes
+
+=========================================================================================================================================================================================================
+
+
+String Data Types in SQL Server																							
+																							
+In sql, string data types are used to store any kind of data in the table. In string data types, we have an option to allow users to store either the fixed length of characters or huge length data based on their requirements.																							
+																							
+In SQL we have a different type of string data types available, those are																							
+																							
+◕	Character String Data Types																						
+◕	Unicode Character String Data Types																						
+																							
+SQL Character String Data Types																							
+																							
+◕	char datatype																						
+	In sql, char datatype is used to store a fixed length of characters. Suppose if we declare a char(50), then it will allocate a memory for 50 characters to hold 50 characters of data. In case, if we insert only 10 characters of a string, then only 10 characters of memory will be used and remaining 40 characters of memory will be wasted.																						
+																							
+◕	varchar datatype																						
+	In sql, varchar means variable characters and it is used to store non-unicode characters. It will allocate the memory based on the number characters inserted. Suppose if we declare varchar(50), then it will allocate memory of 0 characters at the time of declaration. Now if we insert only 10 characters of a string, then it will allocate memory for only 10 characters.																						
+																							
+																							
+	Data Type	Description											Storage																				
+	char		It’s a fixed-length character string and we can store maximum 8000 characters			Based on defined width																
+	varchar(n)	It’s a variable-length character string and we can store maximum 8000 characters		2 Bytes number of characters															
+	varchar(max)	It’s a variable-length character string and we can store maximum 2^31-1 characters (upto 2 GB)	2 Bytes number of characters																				
+================																								
+																							
+SQL Unicode Character String Data Types																							
+																							
+In sql, Unicode character string data types are used in a situation where we required to store huge data. In Unicode character string, we have a different type of string data types available, those are																							
+																							
+◕	nchar																						
+◕	nvarchar																						
+◕	nvarchar(max)																						
+																							
+	Data Type	Description																					
+	nchar		It’s a fixed-length character string and we can store maximum 4000 characters																					
+	nvarchar(n)	It’s a variable-length character string and we can store maximum 4000 characters																				
+	nvarchar(max)	It’s variable-length character string and we can store maximum 2^30-1 characters (upto 2 GB)																					
+
+=========================================================================================================================================================================================================
+
+Binary Data Types in SQL Server										
+										
+In SQL, binary data types are used to store any kind of binary data like images, word files, text files, etc. in the table. In binary data types, we have an option like allowing users to store fixed-length or variable length of bytes based on requirements.										
+										
+In SQL, we have a different type of binary data types available, those are										
+										
+◕	binary datatype	we can use binary datatype whenever the size of data entries are consistent.								
+◕	varbinary datatype	we can use varbinary datatype whenever the size of data entries are considerably varies.								
+◕	varbinary(max) datatype	we can use varbinary(max) datatype whenever the size of data entries exceeds 8000 bytes.								
+										
+	Data Type	Description									Storage							
+	binary(n)	It’s fixed-length binary data and we can store maximum 8000 bytes		Based on the defined size							
+	varbinary	It’s variable-length binary data and we can store maximum 8000 bytes		Based on number of bytes							
+	varbinary(max)	It’s a variable-length character string and we can store maximum 2GB data	Based on the number of bytes							
+
+
+=========================================================================================================================================================================================================
+
+
+Miscellaneous Data Types in SQL Server																									
+																									
+we have different datatypes that will not come under string datatypes, binary data types, date and time and numeric datatypes those will be called miscellaneous or other data types.																									
+																									
+we have a different type of miscellaneous data types available, those are																									
+																									
+◕	cursor datatype	we can use cursor datatype to hold a reference of cursor objects. Any variables created with cursor datatype are nullable and cursor datatype cannot be used for a column while creating a table.																							
+◕	XML datatype	we will use XML datatype to store XML formatted data in the column. In the XML datatype column, we can store a maximum of 2 GB data																							
+◕	table datatype	table datatype will be useful to store a table result set in variable for processing later time. The table variables can be used in stored procedures, functions and these variables cleaned up automatically at the end of function or stored procedures.																							
+◕	uniqueidentifier datatype	the uniqueidentifier datatypes are used to store a globally unique identifier (GUID).																							
+◕	sql_variant datatype	sql_variant datatype is used to store a various sql supported data types like int, char, binary, etc.																							
+																									
+																									
+	Data Type		Description																							
+	cursor			It is used to store a reference to cursor object																							
+	XML			It is used to store XML formatted data and we can store maximum 2GB data																				
+	table			It is used to store table result set for processing at a later time																					
+	uniqueidentifier	It is used to store globally unique identifier (GUID)																							
+	sql_variant		It is used to store values of various sql supported data types except text,ntext, varchar(max), xml, etc… We can store a maximum of 8000 bytes
+
+																				
+
+=========================================================================================================================================================================================================
+What is DATA?
+-- Data can be anything
+-- You and I are a DATA.
+-- Data can be in the form of text, numbers or date formats
+-- A storing of a data in a file is called database
+-- Data can be sotred in Notepad, excel or SQL server
+
+Challenges in File Data Storage
+-- Size of Data
+-- Ease of updating
+-- Accuracy
+-- Security
+-- Redundancy
+-- Incomplete Data
+
+=========================================================================================================================================================================================================
+What is Database?
+-- Database is a storage system that has collection of data
+-- Relstional Database, Stores data in form of a table that can be easily retrived.
+
+=========================================================================================================================================================================================================
+What is SQL?
+-- SQL is a language to communicate with database
+-- Its a DOMAIN SPECIFIC LANGUAGE (DSL)/Scripting Langugae
+-- SEQUEL - Structured English Query Language
+-- SEQUEL was developed by IBM corporation
+-- SEQUEL later become [SQL] but still prononced as "SEQUEL" or "S-Q-L"
+-- SQL/DS (data System) was released in 1981 by IBM, its commercial Database
+-- SQL commands/syntax helps us to do CRUD operations
+
+=========================================================================================================================================================================================================
+What is Tables?
+--Tables are Database Objects(DBO) that contains all the data.
+--In a table, Datas are logically organized in a row-and-columns
+	-Each ROW - UNIQUE RECORD
+	-Each COL - Fields in the record
+
+=========================================================================================================================================================================================================
+Features of SQL
+-- Access any data with the releational Database
+-- SQL is very fast in doing CRUD operations
+-- SQL is very versatile as it works with database systems
+-- SQL helps us to manage database without knowing lot of coding
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,48 @@
+--SUB LANGUGAES of SQL.
+
+DDL, DML, DQL, DCL, TCL
+--
+DQL/DRL - Data Query/Reterival Language
+
+			main purpose is to 
+					1. Reterive data, Read Data or display data in result window
+		- SELECT
+			
+			SELECT * FROM <table_Name>
+			* - ALL (all the columns)
+
+
+[ SELECT * ] - i sheling in examining the columns and datas of a table.
+
+
+3 types of reterival:
+	1. PROJECTION METHOD - single table 	- WHERE CONDITION
+	2. SELECTION METHOD  - single table 	- WITHOUT CONDITION
+	3. JOINS	     - Multiple tables
+
+===============================================================================================================
+
+DML - Data Manipulation Language
+
+- modify(s) the data present in the table.
+- it has no relation with structure of the table.
+DML involes in :
+	- INSERT 
+
+		INSERT INTO <Table_name> VALUES <Col_Value1, Col_values2, Col_values3...........>
+
+	- UPDATE
+
+		UPDATE <table_name> SET <Col_name1> = Value1, ...... [WHERE]
+
+	- DELETE
+
+		DELETE FROM <Table_name>
+		[WHERE]
+
+-** Any changes which is made by DML statement will be called as "TRANSACTION - TCL" / in order to handle the changes done by the database by DML, we need TCL.
+
+-** the changes made by DML are permenant
+
+**** What is diffrence between DELETE, DROP and TRUNCATE
+

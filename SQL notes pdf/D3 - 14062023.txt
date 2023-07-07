@@ -1,0 +1,16 @@
+Server Types
+
+SSMS tool:
+	1. Database Engine
+
+
+MSBI tool ---> to intract with MSBI tool we need developing tool (BIDS)
+MSBI -- Microsoft Business Intelligence Tool
+BIDS -- Business intelligence Development Studio
+
+	2. Analysis Services (SSAS)
+	3. Reporting Services (SSRS)
+	4. Intergration Services (SSIS)
+
+
+**SSMS will not support MSBO ttol (SSAS, SSRS, SSIS)

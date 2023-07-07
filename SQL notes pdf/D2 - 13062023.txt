@@ -1,0 +1,27 @@
+Why MS-Server?
+
+-- its a RDBMS tool.
+-- Introduced by Micorsoft Company in 1989.
+-- SQL server is a backend tool which helps to develop backend application
+-- SQL server will provide more GUI facility.
+	
+	- 1. GUI - Graphical User Interface
+			Without Query Statement
+			
+	- 2. CUI - Character User Interface
+			With Query Statement
+
+HOW to work with SQL server?
+
+-- INSTANCE
+	- Collection of Objects
+	- Objects can be - Tables, views, procedures etc...
+	- in single instace - we can have 32767 DBs.
+	- The instance will allcate/create a memory in server
+
+
+** SQL server is collection of DBs <<------>> every DBs is collection of Objects
+	
+
+
+

@@ -1,0 +1,134 @@
+OPERATORS:
+
+In SQL, operators is asymbol which is used to specify a particular action that is performed on one or more expression
+
+	We have diff. types of OPERATORS:
+		1. SQL Arithmatic Operators 
+		2. SQL Logical Operators
+		3. SQL Camparison Operators
+		4. Assignment Operators
+
+============================================================================================================================================================================================================================================
+============================================================================================================================================================================================================================================
+
+
+1. SQL Arithmatic Operators :
+
+ - Addition		--   (+)
+ - Subtraction		--   (-)
+ - Multiplication	--   (*)
+ - Division		--   (/)
+ - Modulos		--   (%)
+
+	SYNTAX :
+		
+		SELECT <Column_Name>, <column_nameX> (arithmatic Operators like +, -, /, %, *) <column_nameY> AS <Final_Col_Name> FROM <TABLE NAME>
+
+	Ex: 	SELECT emp_name, emp_basic_salary + emp_bonus_salary AS emp_total_salary
+		FROM emp_details
+
+============================================================================================================================================================================================================================================
+============================================================================================================================================================================================================================================
+
+
+2. SQL Logical Operatorss :
+
+--Logical is a symbol or word used to connect two or more expression
+
+ -- AND					-- AND operator is used to compare data with more than one condition, and it will return records only when all the defined conditions are TRUE
+ -- OR					-- OR  for Comparing data with more than one condition and it will return records when EITHER of the conditions is TRUE
+ -- BETWEEN    //    NOT BETWEEN	-- BETWEEN Operatorsis usefull to get the values within the defined range	//	NOT BETWEEN - opposite of BETWEEN show rest other values other than the given range
+ -- IN         //    NOT IN		-- IN operator is usefull to search for the specifed value that matches with any value in the set of multiple values or NOT	//	NOT IN - retrives rest other values
+ -- LIKE       //    NOT LIKE		-- LIKE operator searchs for the character string with specifed pattern using wildcards in Column. Pattern means - string of characters with wildcards to search matching expressions
+
+
+	SYNTAX : AND : SELECT * FROM <TN>
+		       WHERE condition1 = 'expression1' AND condition2 = 'expression2'.....
+		
+		ex:    SELECT * FROM <TN>
+		       WHERE location = 'Guntur' and location = 'Chennai'
+
+===================================================
+
+	SYNTAX : OR : SELECT * FROM <TN>
+		       WHERE condition1 = 'expression1' OR condition2 = 'expression2'.....
+		
+		ex:    SELECT * FROM <TN>
+		       WHERE location = 'Guntur' OR Salary > 50000
+
+===================================================
+
+LIKE :
+	SYNTAX : LIKE : SELECT * FROM <TN>
+		       WHERE condition1 LIKE '%[Char]'  --- Anything which BEGINs with
+
+	SYNTAX : LIKE : SELECT * FROM <TN>
+		       WHERE condition1 LIKE '[Char]%'  --- Anything which ENDs with
+
+	SYNTAX : LIKE : SELECT * FROM <TN>
+		       WHERE condition1 LIKE '%[Char]%' --- Contains a WORD
+
+
+NOT LIKE :
+	SYNTAX : NOT LIKE : SELECT * FROM <TN>
+		            WHERE condition1 NOT LIKE '%[Char]'  --- Anything which does not BEGINs with
+
+	SYNTAX : NOT LIKE : SELECT * FROM <TN>
+		            WHERE condition1 NOT LIKE '[Char]%'  --- Anything which does not ENDs with
+
+	SYNTAX : NOT LIKE : SELECT * FROM <TN>
+		            WHERE condition1 NOT LIKE '%[Char]%' --- Does not contain a WORD
+
+	
+===================================================
+
+IN :
+
+	SYNTAX : IN : SELECT * FROM <TN>
+		      WHERE condition1 IN (exp1, exp2, exp3, exp4............)
+
+NOT IN :
+
+	SYNTAX : NOT IN : SELECT * FROM <TN>
+		          WHERE condition1 NOT IN (exp1, exp2, exp3, exp4............)
+
+===================================================
+
+BETWEEN :
+
+	SYNTAX : IN : SELECT * FROM <TN>
+		      WHERE condition1 BETWEEN range1  AND range2	-- for numeric
+	
+	
+	SYNTAX : IN : SELECT * FROM <TN>
+		      WHERE condition1 BETWEEN 'Char1'  AND 'Char2'	-- for alphabet/character
+
+NOT BETWEEN :
+
+
+	SYNTAX : IN : SELECT * FROM <TN>
+		      WHERE condition1 NOT BETWEEN range1  AND range2
+	
+	
+	SYNTAX : IN : SELECT * FROM <TN>
+		      WHERE condition1 NOT BETWEEN 'Char1'  AND 'Char2'
+
+============================================================================================================================================================================================================================================
+============================================================================================================================================================================================================================================
+
+3. SQL Camparison Operators
+
+ -- NOT EQUAL			-- != OR <>
+ -- EQUAL			-- =
+ -- GREATER THAN EQUAL TO	-- >=
+ -- LESS THAT EQUAL TO		-- <=
+ -- GREATER THAN		-- >
+ -- LESS THAN			-- <
+
+============================================================================================================================================================================================================================================
+============================================================================================================================================================================================================================================
+
+4. Assignment Operators
+
+ -- EQUAL TO		-- =
+		

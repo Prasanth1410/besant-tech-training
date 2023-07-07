@@ -1,0 +1,113 @@
+CLAUSES:
+	0. WHERE
+
+	1. GROUP BY
+		-- It is used to GROUPING the similar data based on the columns
+
+		SYNTAX :
+			
+		SELECT col_1, col_2....., aggregrate function(col_X)
+		FROM <TN>
+		[WHERE]
+		GROUP BY expX;
+
+//////// //////// //////// //////// ////////  --- run it in the ssms
+
+CREATE DATABASE groupBYClause;
+Go
+
+USE groupBYClause;
+Go
+
+CREATE TABLE sales (
+	OrderId int,
+	Product varchar(50),
+	category varchar(50),
+	qty int,
+	price decimal(10, 2)
+);
+Go
+
+INSERT INTO sales VALUES
+(1, 'product A', 'Category X', 10, 100.00),
+(2, 'Product B', 'Category X', 5, 50.00),
+(3, 'Product C', 'Category Y', 8, 80.00),
+(4, 'Product D', 'Category Y', 3, 120.00),
+(5, 'Product E', 'Category Z', 12, 100.00),
+(6, 'Product F', 'Category Z', 6, 90.00)
+Go
+INSERT INTO sales VALUES
+(7, 'product A', 'Category X', 100, 100.00),
+(8, 'product A', 'Category X', 500, 100.00);
+
+SELECT * FROM sales;
+Go
+
+SELECT category,  sum(Price) 
+FROM sales
+GROUP BY category ;
+
+--------------
+
+--AGG FUNCTION
+SELECT count(EmpName) as Countof FROM <TN>;
+SELECT SUM(Salary)  as sumofsalary FROM <TN>
+SELECT MAX(Salary) FROM <TN>
+SELECT MIN(Salary) FROM <TN>
+SELECT AVG(Salary) FROM <TN>
+
+
+
+\\\\\\\\\ \\\\\\\\\ \\\\\\\\\ \\\\\\\\\ \\\\\\\\\
+
+aggregrate function : SUM, MAX, MIN, COUNT, AVG
+
+	2. HAVING -- The HAVING clause was added to SQL because the WHERE keyword cannot be used with aggregate functions.
+
+	SYNTAX :
+		SELECT column_name(s)
+		FROM table_name
+		WHERE condition
+		GROUP BY column_name(s)
+		HAVING condition
+		ORDER BY column_name(s);
+
+	--The HAVING clause places the condition in the groups defined by the GROUP BY clause in the SELECT statement.
+	--This SQL clause is implemented after the 'GROUP BY' clause in the 'SELECT' statement.
+	--This clause is used in SQL because we cannot use the WHERE clause with the SQL aggregate functions. Both WHERE and HAVING clauses are used for filtering the records in SQL queries.
+
+
+
+
+	3. ORDER BY
+		- Order by expression is optional
+		- it is used to sort the records in your table/reslt in the form of ASC (Ascending) order or DESC (Descending) order
+	
+	SYNTAX :
+
+		SELECT COL1, COL2, COl3 FROM <TN>
+		ORDER BY COL_NAME [ASC || DESC]
+
+
+
+DIFFERENCE BETWEEN WHERE CLAUSE and HAVING CLAUSE
+
+HAVING
+1. The HAVING clause is used in database systems to fetch the data/values from the groups according to the given condition.	
+2. The HAVING clause is always executed with the GROUP BY clause.								
+3. The HAVING clause can include SQL aggregate functions in a query or statement.						
+4. We can only use SELECT statement with HAVING clause for filtering the records.						
+5. The HAVING clause is used in SQL queries after the GROUP BY clause.								
+6. We can implements this SQL clause in column operations.									
+7. It is a post-filter.														
+8. It is used to filter groups.													
+
+WHERE
+1. The WHERE clause is used in database systems to fetch the data/values from the tables according to the given condition.
+2. The WHERE clause can be executed without the GROUP BY clause.
+3. We cannot use the SQL aggregate function with WHERE clause in statements.
+4. Whereas, we can easily use WHERE clause with UPDATE, DELETE, and SELECT statements.
+5. The WHERE clause is always used before the GROUP BY clause in SQL queries.
+6. We can implements this SQL clause in row operations.
+7. It is a pre-filter.
+8. It is used to filter the single record of the table.
